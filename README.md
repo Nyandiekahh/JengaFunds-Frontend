@@ -1,71 +1,194 @@
-# Getting Started with Create React App
+# JengaFunds - P2P Lending Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+JengaFunds is a comprehensive Peer-to-Peer lending platform that connects borrowers with lenders, streamlining the loan process while ensuring security and transparency. Built with React for the frontend and Flask for the backend, this platform offers a modern, user-friendly interface for managing loans, investments, and financial transactions.
+
+## Features
+
+### For Borrowers
+- 📝 Loan Application Portal
+  - Interactive loan calculator
+  - Customizable loan terms
+  - Document upload system
+  - Application tracking
+
+- 📊 Dashboard
+  - Active loan monitoring
+  - Payment schedules
+  - Credit score tracking
+  - Repayment history
+
+- 💰 Payment Management
+  - M-PESA integration
+  - Automated payment reminders
+  - Payment scheduling
+  - Transaction history
+
+### For Lenders
+- 💼 Investment Portal
+  - Risk assessment tools
+  - Portfolio management
+  - Investment opportunities
+  - Return on investment tracking
+
+- 📈 Analytics Dashboard
+  - Investment performance metrics
+  - Risk distribution analysis
+  - Monthly returns tracking
+  - Borrower creditworthiness assessment
+
+### For Admins
+- 👥 User Management
+  - User verification
+  - Account management
+  - Role assignment
+  - Activity monitoring
+
+- 🔍 Loan Oversight
+  - Loan approval system
+  - Risk assessment
+  - Default management
+  - System statistics
+
+## Technical Stack
+
+### Frontend
+- React.js
+- Tailwind CSS
+- Recharts for data visualization
+- Lucide React for icons
+- React Router for navigation
+
+### Backend (Integration Ready)
+- Flask
+- JWT Authentication
+- SQLAlchemy
+- M-PESA API Integration
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/jengafunds.git
+cd jengafunds
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm start
+```
+
+## Environment Setup
+Create a `.env` file in the root directory:
+```plaintext
+REACT_APP_API_URL=http://localhost:5000/api
+REACT_APP_MPESA_API_KEY=your_mpesa_api_key
+```
+
+## Project Structure
+```
+src/
+├── components/
+│   ├── dashboard/
+│   │   ├── StatCard.js
+│   │   ├── LoanCalculator.js
+│   │   └── ActivityFeed.js
+│   ├── loans/
+│   │   ├── LoanCard.js
+│   │   └── LoanForm.js
+│   ├── profile/
+│   │   └── ProfileCard.js
+│   ├── messaging/
+│   │   └── ChatInterface.js
+│   └── shared/
+│       └── LoadingSpinner.js
+├── pages/
+│   ├── Dashboard.js
+│   ├── Loans.js
+│   ├── Profile.js
+│   └── Settings.js
+├── layouts/
+│   └── DashboardLayout.js
+├── utils/
+│   └── helpers.js
+└── App.js
+```
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App
 
-### `npm start`
+## API Integration
+The frontend is designed to integrate with a Flask backend. All API endpoints are prepared for seamless integration:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```javascript
+// Example API endpoints
+/api/auth/login
+/api/auth/register
+/api/loans/create
+/api/loans/approve
+/api/payments/process
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Contributing
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### `npm test`
+## Security Features
+- JWT Authentication
+- Role-based access control
+- Secure payment processing
+- Data encryption
+- Input validation
+- XSS protection
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Testing
+Run the test suite:
+```bash
+npm test
+```
 
-### `npm run build`
+## Deployment
+Build the production-ready application:
+```bash
+npm run build
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The build folder is ready to be deployed to your hosting platform of choice.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Acknowledgments
+- [Create React App](https://github.com/facebook/create-react-app)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Recharts](https://recharts.org/)
+- [Lucide React](https://lucide.dev/)
 
-### `npm run eject`
+## Support
+For support, email support@jengafunds.com or join our Slack channel.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Roadmap
+- [ ] Mobile application development
+- [ ] Advanced analytics dashboard
+- [ ] Automated risk assessment
+- [ ] Blockchain integration
+- [ ] AI-powered credit scoring
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Status
+Project is: _in development_
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# JengaFunds-Frontend
+For more information, please refer to the [Documentation](docs/README.md)
